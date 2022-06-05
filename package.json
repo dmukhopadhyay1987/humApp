@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "cordova-plugin-dialogs": "~1.3.3",
+    "cordova-plugin-whitelist": "1",
+    "cordova-plugin-device-motion": "~1.2.5",
+    "cordova-plugin-device-orientation": "~1.0.7"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-dialogs": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-device-motion": {},
+      "cordova-plugin-device-orientation": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+}
