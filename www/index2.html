@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script src="js/angular.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Hum</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/rzslider.css" rel="stylesheet">
+<link href="css/hum.css" rel="stylesheet">
+
+</head>
+
+<body ng-controller="rootCtrl" ng-cloak>
+
+	<div class="row">
+		<div class="col-xs-2">&nbsp;</div>
+		<div class="col-xs-4">
+			<h1>
+				<b>Hum</b>
+			</h1>
+			<h5>
+				<b>{{root.model.id}}</b>
+			</h5>
+		</div>
+		<div class="col-xs-4">
+			<h3>
+				<b>{{root.model.control.t | date: '[MM.dd] HH:mm:ss.sss'}}</b>
+			</h3>
+		</div>
+		<div class="col-xs-2">&nbsp;</div>
+	</div>
+
+	<div class="row" ng-controller="humCtrl">
+		<div class="col-xs-12">
+			<div class="row">
+				<div class="col-xs-2">&nbsp;</div>
+				<div class="col-xs-8">
+					<div class="row">
+						<div class="col-xs-3">&nbsp;</div>
+						<div class="col-xs-3">Sample</div>
+						<div class="col-xs-2">
+							<b>Roll</b>
+						</div>
+						<div class="col-xs-2">
+							<b>Pitch</b>
+						</div>
+						<div class="col-xs-2">
+							<b>Yaw</b>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3">
+							<b>RPY</b>
+						</div>
+						<div class="col-xs-3">
+							<input type="number"
+								ng-model="root.model.options.frequency" min="5"
+								max="5000">&nbsp;ms
+						</div>
+						<div class="col-xs-2">
+							<h4>
+								<b>{{root.model.sensor.r | number: 1}}</b>
+							</h4>
+						</div>
+						<div class="col-xs-2">
+							<h4>
+								<b>{{root.model.sensor.p | number: 1}}</b>
+							</h4>
+						</div>
+						<div class="col-xs-2">
+							<h4>
+								<b>{{root.model.sensor.y | number: 1}}</b>
+							</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3">&nbsp;</div>
+						<div class="col-xs-3">&nbsp;</div>
+						<div class="col-xs-2">
+							<b>R</b>
+						</div>
+						<div class="col-xs-2"></div>
+						<div class="col-xs-2">
+							<b>A</b>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3">
+							<b>Req Polar</b>
+						</div>
+						<div class="col-xs-3">&nbsp;</div>
+						<div class="col-xs-2">{{root.model.control.joystick.r |
+							number: 2}}</div>
+						<div class="col-xs-2">&nbsp;</div>
+						<div class="col-xs-2">{{root.model.control.joystick.a |
+							number: 2}}</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3">
+							<b>Throttle</b>
+						</div>
+						<div class="col-xs-3">&nbsp;</div>
+						<div class="col-xs-2">&nbsp;</div>
+						<div class="col-xs-2">&nbsp;</div>
+						<div class="col-xs-2">{{root.model.control.throttle.t |
+							number: 2}}</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="row">
+								<div class="col-xs-12">
+									<b>Feedback</b>
+								</div>
+							</div>
+							<div class="row" ng-repeat="(id, partner) in root.model.online"
+								ng-if="id != root.model.id">
+								<div class="col-xs-12">
+									<input type="radio" name="partner" value="{{id}}"
+										ng-model="root.model.partner">{{id}}
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="row">
+								<div class="col-xs-4">&nbsp;</div>
+								<div class="col-xs-4">{{root.model.control.feedback.motor[0]
+									| number: 2}}</div>
+								<div class="col-xs-4">&nbsp;</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4">{{root.model.control.feedback.motor[1]
+									| number: 2}}</div>
+								<div class="col-xs-4">&nbsp;</div>
+								<div class="col-xs-4">{{root.model.control.feedback.motor[3]
+									| number: 2}}</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4">&nbsp;</div>
+								<div class="col-xs-4">{{root.model.control.feedback.motor[2]
+									| number: 2}}</div>
+								<div class="col-xs-4">&nbsp;</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3">
+							<b>Res Polar</b>
+						</div>
+						<div class="col-xs-3">&nbsp;</div>
+						<div class="col-xs-2">{{root.model.control.feedback.res_vector.r
+							| number: 2}}</div>
+						<div class="col-xs-2">&nbsp;</div>
+						<div class="col-xs-2">{{root.model.control.feedback.res_vector.a
+							| number: 2}}</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3">
+							<b>error</b>
+						</div>
+						<div class="col-xs-3">&nbsp;</div>
+						<div class="col-xs-2">{{root.model.control.feedback.res_vector.r
+							- root.model.control.joystick.r | number: 2}}</div>
+						<div class="col-xs-2">&nbsp;</div>
+						<div class="col-xs-2">{{root.model.control.feedback.res_vector.a
+							- root.model.control.joystick.a | number: 2}}</div>
+					</div>
+				</div>
+				<div class="col-xs-2">&nbsp;</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-2">&nbsp;</div>
+				<div class="col-xs-4">
+					<div id="field" class="circleBase type3">
+						<div id="joystick" joystick xy="root.model.control" rpy="root.model.sensor"
+							class="circleBase type2"></div>
+					</div>
+				</div>
+				<div class="col-xs-4">
+					<div id="rail" class="rail">
+						<div id="throttle" throttle class="circleBase type1"></div>
+					</div>
+				</div>
+				<div class="col-xs-2">&nbsp;</div>
+			</div>
+		</div>
+		<!-- /.col-xs-12 -->
+	</div>
+	<!-- /.row -->
+
+	<!-- config -->
+	<script src="common/config.js"></script>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="js/ng-cordova.js"></script>
+	<script src="js/angular-touch2.js"></script>
+
+	<!-- Socket client Core JavaScript -->
+	<script src="js/socket.io-1.4.5.js"></script>
+
+	<!-- Sanitizer JavaScript -->
+	<script src="js/angular-sanitize.min.js"></script>
+
+	<!-- base64 JavaScript -->
+	<script src="js/angular-base64.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/ui-bootstrap-tpls.js"></script>
+
+	<!-- Custom common JavaScript -->
+	<script src="common/app.js"></script>
+	<script src="common/rootCtrl.js"></script>
+
+	<!-- Custom JavaScript for specific modules-->
+	<script src="modules/hum/js/humCtrl.js"></script>
+
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="cordova_plugins.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script>
+	  document.addEventListener('deviceready', function() { 
+	    	angular.bootstrap(document, ['hum']);
+	  }, false);
+</script>
+</body>
+
+</html>

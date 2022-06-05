@@ -1,0 +1,53 @@
+{
+		"businessHeaders" : [
+		      {
+		    	  "id" : 1,
+		    	  "templateId": 100,
+		    	  "name": "Plan / Contract Number",
+		    	  "desc": "Plan / Contract Number Desc",
+		    	  "mandatory": true
+		      },
+		      {
+		    	  "id" : 2,
+		    	  "templateId": 100,
+		    	  "name": "Participant's Name",
+		    	  "desc": "Participant's Name Desc",
+		    	  "mandatory": true
+		      },
+		      {
+		    	  "id" : 3,
+		    	  "templateId": 100,
+		    	  "name": "Participant's SSN",
+		    	  "desc": "Participant's SSN Desc",
+		    	  "mandatory": true
+		      },
+		      {
+		    	  "id" : 4,
+		    	  "templateId": 100,
+		    	  "name": "Money Source",
+		    	  "desc": "Money Source Desc",
+		    	  "mandatory": false
+		      },
+		      {
+		    	  "id" : 5,
+		    	  "templateId": 100,
+		    	  "name": "Participant's Date of Birth",
+		    	  "desc": "Participant's Date of Birth Desc",
+		    	  "mandatory": true
+		      },
+		      {
+		    	  "id" : 6,
+		    	  "templateId": 100,
+		    	  "name": "Participant's Address",
+		    	  "desc": "Participant's Address Desc",
+		    	  "mandatory": false
+		      },
+		      {
+		    	  "id" : 7,
+		    	  "templateId": 100,
+		    	  "name": "Plan Type",
+		    	  "desc": "Plan Type Desc",
+		    	  "mandatory": false
+		      }
+		]
+}

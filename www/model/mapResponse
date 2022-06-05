@@ -1,0 +1,284 @@
+{
+		"mappedHeaders" : [
+		      {
+		    	  "id" : 1,
+		    	  "templateId": 100,
+		    	  "name": "Plan / Contract Number",
+		    	  "desc": "Plan / Contract Number Desc",
+		    	  "mappedCol" : "Plan#",
+		    	  "rules" : [
+		    	  		{
+		    	  			"ruleId" : "SSN_V01",		    	  		
+			    	  		"rule" : "Plan / Contract Number Must be Numeric",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V02",		    	  		
+			    	  		"rule" : "All digits of Plan / Contract Number cannot be same",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V03",		    	  		
+			    	  		"rule" : "Plan / Contract Number length < 9 digits",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V04",		    	  		
+			    	  		"rule" : "First 3 digits cannot be zero",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V05",		    	  		
+			    	  		"rule" : "4th and 5th digits cannot be zero",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		}
+		    	  ]
+		      },
+		      {
+		    	  "id" : 2,
+		    	  "templateId": 100,
+		    	  "name": "Participant's Name",
+		    	  "desc": "Participant's Name Desc",
+		    	  "mappedCol" : "Name",
+		    	  "rules" : [
+		    	  		{
+		    	  			"ruleId" : "SSN_V01",		    	  		
+			    	  		"rule" : "Participant's Name must not be numeric",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V02",		    	  		
+			    	  		"rule" : "All characters of Participant's Name cannot be same",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V04",		    	  		
+			    	  		"rule" : "First 3 characters cannot be blank",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		}
+		    	  ]
+		      },
+		      {
+		    	  "id" : 3,
+		    	  "templateId": 100,
+		    	  "name": "Participant's SSN",
+		    	  "desc": "Participant's SSN Desc",
+		    	  "mappedCol" : "SS#",
+		    	  "rules" : [
+		    	  		{
+		    	  			"ruleId" : "SSN_V04",		    	  		
+			    	  		"rule" : "First 3 digits cannot be zero",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V05",		    	  		
+			    	  		"rule" : "4th and 5th digits cannot be zero",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V06",		    	  		
+			    	  		"rule" : "SSN exits in RKS under a different name",
+			    	  		"excluded" : false,
+			    	  		"optional" : true,
+			    	  		"comment" : "Optional"
+		    	  		}
+		    	  ]
+		      },
+		      {
+		    	  "id" : 4,
+		    	  "templateId": 100,
+		    	  "name": "Money Source",
+		    	  "desc": "Money Source Desc",
+		    	  "mappedCol" : "Type",
+		    	  "rules" : [
+		    	  		{
+		    	  			"ruleId" : "SSN_V01",		    	  		
+			    	  		"rule" : "SSN Must be Numeric",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V02",		    	  		
+			    	  		"rule" : "All digits of SSN cannot be same",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V04",		    	  		
+			    	  		"rule" : "First 3 digits cannot be zero",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V05",		    	  		
+			    	  		"rule" : "4th and 5th digits cannot be zero",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V06",		    	  		
+			    	  		"rule" : "SSN exits in RKS under a different name",
+			    	  		"excluded" : false,
+			    	  		"optional" : true,
+			    	  		"comment" : "Optional"
+		    	  		}
+		    	  ]
+		      },
+		      {
+		    	  "id" : 5,
+		    	  "templateId": 100,
+		    	  "name": "Participant's Date of Birth",
+		    	  "desc": "Participant's Date of Birth Desc",
+		    	  "mappedCol" : "Amount",
+		    	  "rules" : [
+		    	  		{
+		    	  			"ruleId" : "SSN_V01",		    	  		
+			    	  		"rule" : "SSN Must be Numeric",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V02",		    	  		
+			    	  		"rule" : "All digits of SSN cannot be same",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V06",		    	  		
+			    	  		"rule" : "SSN exits in RKS under a different name",
+			    	  		"excluded" : false,
+			    	  		"optional" : true,
+			    	  		"comment" : "Optional"
+		    	  		}
+		    	  ]
+		      },
+		      {
+		    	  "id" : 6,
+		    	  "templateId": 100,
+		    	  "name": "Participant's Date of Birth",
+		    	  "desc": "Participant's Date of Birth Desc",
+		    	  "mappedCol" : "Plan#",
+		    	  "rules" : [
+		    	  		{
+		    	  			"ruleId" : "SSN_V01",		    	  		
+			    	  		"rule" : "SSN Must be Numeric",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V02",		    	  		
+			    	  		"rule" : "All digits of SSN cannot be same",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V03",		    	  		
+			    	  		"rule" : "SSN length < 9 digits",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V05",		    	  		
+			    	  		"rule" : "4th and 5th digits cannot be zero",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V06",		    	  		
+			    	  		"rule" : "SSN exits in RKS under a different name",
+			    	  		"excluded" : false,
+			    	  		"optional" : true,
+			    	  		"comment" : "Optional"
+		    	  		}
+		    	  ]
+		      },
+		      {
+		    	  "id" : 7,
+		    	  "templateId": 100,
+		    	  "name": "Participant's Date of Birth",
+		    	  "desc": "Participant's Date of Birth Desc",
+		    	  "mappedCol" : "Address",
+		    	  "rules" : [
+		    	  		{
+		    	  			"ruleId" : "SSN_V01",		    	  		
+			    	  		"rule" : "SSN Must be Numeric",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V02",		    	  		
+			    	  		"rule" : "All digits of SSN cannot be same",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V03",		    	  		
+			    	  		"rule" : "SSN length < 9 digits",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V04",		    	  		
+			    	  		"rule" : "First 3 digits cannot be zero",
+			    	  		"excluded" : false,
+			    	  		"optional" : false,
+			    	  		"comment" : "Mandatory"
+		    	  		},
+		    	  		{
+		    	  			"ruleId" : "SSN_V06",		    	  		
+			    	  		"rule" : "SSN exits in RKS under a different name",
+			    	  		"excluded" : false,
+			    	  		"optional" : true,
+			    	  		"comment" : "Optional"
+		    	  		}
+		    	  ]
+		      }
+		],
+		"operators" : {
+				"logical" : [
+                    	{ "name": "AND" },
+                    	{ "name": "OR" }
+                ],
+                "conditional" : [
+                    	{ "name": "=" },
+                    	{ "name": "<>" },
+                    	{ "name": "<" },
+                    	{ "name": "<=" },
+                    	{ "name": ">" },
+                    	{ "name": ">=" }
+                ]
+		}
+}

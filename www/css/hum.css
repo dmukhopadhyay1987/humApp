@@ -1,0 +1,100 @@
+body {
+	color: #9dff90 !important;
+	background-color: #556353;
+}
+
+.humnav {
+	background-color: #242924;
+	border-color: #080808;
+}
+
+.humnavopen {
+	color: #9dff90 !important;
+	background-color: #242924 !important;
+}
+
+.humnavbrand {
+	color: #9dff90 !important;
+}
+
+.humiconbar {
+	background-color: #9dff90 !important;
+}
+
+.circleBase {
+	border-radius: 50%;
+	-webkit-box-shadow: #666 -0px 15px 35px;
+	-moz-box-shadow: #666 -0px 15px 35px;
+	box-shadow: #666 -0px 15px 35px;
+	behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
+
+.type1 {
+	width: 55px;
+	height: 20px;
+	background: #9dff90;
+	border: 3px solid #fff;
+	margin-left: -25px;
+	margin-top: 80px;
+	z-index: 20;
+	border-radius: 20%;
+}
+
+.type2 {
+	width: 30px;
+	height: 30px;
+	background: #9dff90;
+	border: 3px solid #fff;
+	margin-left: 32px;
+	margin-top: 32px;
+	z-index: 20;
+}
+
+.type3 {
+	width: 100px;
+	height: 100px;
+	background: transparent;
+	border: 3px solid #fd9902;
+	margin: 10px;
+}
+
+.project-overlay {
+	position: absolute;
+	top: 0;
+	padding: 50%;
+}
+
+.rail {
+	width: 9px;
+	height: 100px;
+	border: 3px solid #fd9902;
+	-webkit-box-shadow: #666 -0px 15px 35px;
+	-moz-box-shadow: #666 -0px 15px 35px;
+	box-shadow: #666 -0px 15px 35px;
+	margin-top: 10px;
+	float: left;
+}
+
+.vcenter {
+	display: inline-block;
+	vertical-align: middle;
+	float: none;
+}
+
+.throttleupbutton {
+	margin-top: 25px;
+	color: #9dff90;
+}
+
+.throttledownbutton {
+	margin-top: 25px;
+	color: #fd9902;
+}
+
+.sectionborder {
+	border-bottom: 2px solid #1ef;
+}
+
+.subsectionborder {
+	border: 2px solid #fe1;
+}

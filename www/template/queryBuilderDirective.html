@@ -1,0 +1,35 @@
+<div class="alert alert-warning alert-group color-rule-well">
+	<div class="form-inline">
+		<select ng-options="o.name as o.name for o in operators.logical"
+			ng-model="group.operator" class="form-control input-sm"></select>
+		<button style="margin-left: 5px" ng-click="addCondition()"
+			class="btn btn-sm btn-success color-success">Add Condition</button>
+		<button style="margin-left: 5px" ng-click="addGroup()"
+			class="btn btn-sm btn-success color-success">Add Group</button>
+		<button style="margin-left: 5px" ng-click="removeGroup()"
+			class="btn btn-sm btn-danger color-danger">Remove Group</button>
+	</div>
+	<div class="group-conditions">
+		<div ng-repeat="rule in group.rules | orderBy:'index'"
+			class="condition">
+			<div ng-switch="rule.hasOwnProperty('group')">
+				<div ng-switch-when="true">
+					<query-builder group="rule.group" operators="operators" fields="fields"></query-builder>
+				</div>
+				<div ng-switch-default="ng-switch-default">
+					<div class="form-inline">
+						<select ng-options="t.mappedCol as t.mappedCol for t in fields"
+							ng-model="rule.field" class="form-control input-sm"></select> <select
+							style="margin-left: 5px"
+							ng-options="c.name as c.name for c in operators.conditional"
+							ng-model="rule.condition" class="form-control input-sm"></select>
+						<input style="margin-left: 5px" type="text" ng-model="rule.data"
+							class="form-control input-sm rule-text" ng-trim="true"/>
+						<button style="margin-left: 5px"
+							ng-click="removeCondition($index)" class="btn btn-sm btn-danger color-danger">Remove</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
